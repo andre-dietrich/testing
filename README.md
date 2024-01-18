@@ -1,4 +1,4 @@
 # Mein Toller Kurs
 
-* 1 fu
+* fuu
 * bar
