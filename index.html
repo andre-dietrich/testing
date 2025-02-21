@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PyScript Hello World</title>
+    <link
+      rel="stylesheet"
+      href="https://pyscript.net/releases/2024.4.1/core.css"
+    />
+    <script
+      type="module"
+      src="https://pyscript.net/releases/2024.4.1/core.js"
+    ></script>
+  </head>
+
+  <body>
+    <script id="py-terminal" type="py" terminal worker>
+      from pyscript import document, ffi
+
+      # example: change default font-family
+      __terminal__.options = ffi.to_js({"fontFamily": "cursive"})
+
+      script = document.getElementById("py-terminal")
+      print(script.terminal == __terminal__)
+      # prints True with the defined font
+    </script>
+  </body>
+</html>
